@@ -8,6 +8,8 @@ fi
 # todo: create args parse for support multiple domains
 domains=$1
 
+data_path="./data/certbot"
+
 if [ ! -e "$data_path/conf/options-ssl-nginx.conf" ] || [ ! -e "$data_path/conf/ssl-dhparams.pem" ]; then
   echo "### Downloading recommended TLS parameters ..."
   mkdir -p "$data_path/conf"
